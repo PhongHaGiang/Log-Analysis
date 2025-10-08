@@ -1,0 +1,32 @@
+{
+  "detection_settings": {
+    "failed_attempts_threshold": 5,
+    "time_window_minutes": 10,
+    "severity_levels": {
+      "low": 5,
+      "medium": 5,
+      "high": 10,
+      "critical": 20
+    }
+  },
+  "log_formats": {
+    "ssh": {
+      "pattern": "Failed password|authentication failure",
+      "description": "SSH authentication logs"
+    },
+    "web": {
+      "pattern": "POST.*(/login|/auth).*\\s(401|403)",
+      "description": "Web server authentication logs"
+    },
+    "json": {
+      "pattern": "^\\{.*\\}$",
+      "description": "JSON formatted logs"
+    }
+  },
+  "alert_actions": {
+    "log_to_file": true,
+    "alert_file": "brute_force_alerts.log",
+    "send_email": false,
+    "email_recipients": []
+  }
+}
