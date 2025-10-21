@@ -72,13 +72,10 @@ Xây dựng **một ứng dụng web mini** giúp người dùng **tải file lo
 # B1. Di chuyển đến thư mục project
 cd login-analyzer"
 
-# B2. Kích hoạt môi trường ảo (nếu có)
-venv\Scripts\activate
-
-# B3. Cài thư viện
+# B2. Cài thư viện
 pip install -r requirements.txt
 
-# B4. Chạy ứng dụng
+# B3. Chạy ứng dụng
 streamlit run app.py
 ```
 
